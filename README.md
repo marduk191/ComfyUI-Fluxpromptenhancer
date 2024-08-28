@@ -4,10 +4,17 @@ This custom node for ComfyUI integrates the Flux-Prompt-Enhance model, allowing 
 
 ## Features
 
-- Enhance short prompts into more detailed, descriptive ones suited for flux.1
-- Token limited to 256 for compatibility with schnell.
+- Enhance short prompts into more detailed, descriptive ones
 - Seamless integration with ComfyUI
+- Token limited to 256 for schnell compatibility
 - Easy to install and use
+
+## Prerequisites
+
+- ComfyUI installed and working
+- Python 3.7 or higher
+- PyTorch 1.9.0 or higher
+- Hugging Face Transformers library 4.18.0 or higher
 
 ## Installation
 
@@ -27,17 +34,23 @@ This custom node for ComfyUI integrates the Flux-Prompt-Enhance model, allowing 
    pip install -r requirements.txt
    ```
 
+   This will install PyTorch and the Hugging Face Transformers library, along with any other necessary dependencies.
+
    Note: Make sure you're using the same Python environment that ComfyUI uses.
 
-4. Install the Flux-Prompt-Enhance model:
-   
-   The model will be automatically downloaded from huggingface when you first use the node. 
-  
+4. The Flux-Prompt-Enhance model will be automatically downloaded when you first use the node. However, if you want to pre-download it or if you're working in an offline environment, you can manually download the model:
+
+   ```
+   python -c "from transformers import AutoTokenizer, AutoModelForSeq2SeqLM; AutoTokenizer.from_pretrained('gokaygokay/Flux-Prompt-Enhance'); AutoModelForSeq2SeqLM.from_pretrained('gokaygokay/Flux-Prompt-Enhance')"
+   ```
+
+   This command will download the model and tokenizer to the default Hugging Face cache directory (usually `~/.cache/huggingface/` on Linux or `C:\Users\YourUsername\.cache\huggingface\` on Windows).
+
 5. Restart ComfyUI or reload custom nodes.
 
 ## Usage
 
-1. In the ComfyUI interface, you should now see a new node called "Flux Prompt Enhance" in the "marduk191/Flux_Promt_Enhance" category.
+1. In the ComfyUI interface, you should now see a new node called "Flux Prompt Enhance" in the "text" category.
 
 2. Connect a string input (your initial prompt) to this node.
 
@@ -52,7 +65,7 @@ Output: "a two-story house with white trim, large windows on the second floor, t
 ## Troubleshooting
 
 - If the node doesn't appear in ComfyUI, make sure you've placed the files in the correct directory and restarted ComfyUI.
-- If you encounter any "module not found" errors, ensure that all dependencies are correctly installed in the same Python environment that ComfyUI is using.
+- If you encounter any "module not found" errors, ensure that all dependencies (including PyTorch and Hugging Face Transformers) are correctly installed in the same Python environment that ComfyUI is using.
 - If you get an error about the model not being found, make sure you have an internet connection for the automatic download, or try the manual download step in the installation instructions.
 
 ## Contributing
@@ -67,4 +80,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - This node uses the [Flux-Prompt-Enhance](https://huggingface.co/gokaygokay/Flux-Prompt-Enhance) model by gokaygokay.
 - Thanks to the ComfyUI team for creating an extensible platform.
+- This project relies on the Hugging Face Transformers library for model loading and inference.
 
