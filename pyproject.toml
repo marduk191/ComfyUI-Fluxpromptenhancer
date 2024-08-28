@@ -10,6 +10,6 @@ Repository = "https://github.com/marduk191/ComfyUI-Fluxpromptenhancer"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "marduk191"
 DisplayName = "ComfyUI-Fluxpromptenhancer"
-Icon = ""
+Icon = "https://raw.githubusercontent.com/marduk191/comfyui-marnodes/main/icon/RA.png"
