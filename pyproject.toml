@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-fluxpromptenhancer"
+description = "This custom node for ComfyUI integrates the Flux-Prompt-Enhance model, allowing you to enhance your prompts directly within your ComfyUI workflows."
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["torch>=1.9.0", "transformers>=4.18.0"]
+
+[project.urls]
+Repository = "https://github.com/marduk191/ComfyUI-Fluxpromptenhancer"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-Fluxpromptenhancer"
+Icon = ""
