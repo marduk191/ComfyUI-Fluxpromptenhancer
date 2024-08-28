@@ -24,7 +24,7 @@ This custom node for ComfyUI integrates the Flux-Prompt-Enhance model, allowing 
 
    ```
    cd /path/to/ComfyUI/custom_nodes
-   git clone https://github.com/yourusername/comfyui-flux-prompt-enhance.git
+   git clone https://github.com/marduk191/ComfyUI-Fluxpromptenhancer.git
    ```
 
 3. Install the required dependencies:
