@@ -30,7 +30,7 @@ This custom node for ComfyUI integrates the Flux-Prompt-Enhance model, allowing 
 3. Install the required dependencies:
 
    ```
-   cd comfyui-flux-prompt-enhance
+   cd ComfyUI-Fluxpromptenhancer
    pip install -r requirements.txt
    ```
 
