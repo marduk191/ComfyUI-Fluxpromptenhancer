@@ -50,9 +50,9 @@ This custom node for ComfyUI integrates the Flux-Prompt-Enhance model, allowing 
 
 ## Usage
 
-1. In the ComfyUI interface, you should now see a new node called "Flux Prompt Enhance" in the "text" category.
+1. In the ComfyUI interface, you should now see a new node called "Flux Prompt Enhance" in the "marduk191/Flux_Promt_Enhancer" category.
 
-2. Connect a string input (your initial prompt) to this node.
+2. You can type in this node, or convert the widget to input and connect a string input (your initial prompt) to this node.
 
 3. The node will output an enhanced version of your input prompt.
 
