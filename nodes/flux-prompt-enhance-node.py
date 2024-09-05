@@ -20,6 +20,7 @@ class FluxPromptEnhanceNode:
         return {
             "required": {
                 "prompt": ("STRING", {"multiline": True}),
+                "seed": ("INT", {"default": 0, "min": 0, "max": 0xffffffffffffffff}),
             },
         }
 
@@ -27,8 +28,23 @@ class FluxPromptEnhanceNode:
     FUNCTION = "enhance_prompt"
     CATEGORY = "marduk191/Flux_Prompt_Enhancer"
 
-    def enhance_prompt(self, prompt):
-        answer = self.enhancer(self.prefix + prompt, max_length=self.max_target_length)
+    def enhance_prompt(self, prompt, seed):
+        # Set the seed for reproducibility
+        torch.manual_seed(seed)
+
+        # Use do_sample and temperature to control randomness
+        do_sample = seed != 0
+        temperature = 0.7 if do_sample else 0.0
+
+        answer = self.enhancer(
+            self.prefix + prompt,
+            max_length=self.max_target_length,
+            do_sample=do_sample,
+            temperature=temperature,
+            num_return_sequences=1,
+            top_k=50,
+            top_p=0.95,
+        )
         enhanced_prompt = answer[0]['generated_text']
         return (enhanced_prompt,)
 
