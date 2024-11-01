@@ -1,3 +1,5 @@
+No longer maintained for public updates as another developer has started a version and we really don't need 2.
+
 # Flux Prompt Enhance Node for ComfyUI
 
 This custom node for ComfyUI integrates the Flux-Prompt-Enhance model, allowing you to enhance your prompts directly within your ComfyUI workflows.
