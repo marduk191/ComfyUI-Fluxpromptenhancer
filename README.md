@@ -14,7 +14,7 @@ This custom node for ComfyUI integrates the Flux-Prompt-Enhance model, allowing 
 ## Prerequisites
 
 - ComfyUI installed and working
-- Python 3.7 or higher
+- Python 3.1 or higher
 - PyTorch 1.9.0 or higher
 - Hugging Face Transformers library 4.18.0 or higher
 
